@@ -57,7 +57,7 @@ test_codegen_i8(int8_t value) {
   } else if (value == INT8_MAX) {
     printf("     INT8_MAX");
   } else {
-    printf("%cINT8_C(%4" PRId8 ")", (value < 0) ? '-' : ' ', static_cast<int8_t>((value < 0) ? -value : value));
+    printf("%cINT8_C(%4" PRId8 ")", (value < 0) ? '-' : ' ', (int8_t)((value < 0) ? -value : value));
   }
 }
 
@@ -68,7 +68,7 @@ test_codegen_i16(int16_t value) {
   } else if (value == INT16_MAX) {
     printf( "%16s", "INT16_MAX");
   } else {
-    printf( "%cINT16_C(%6" PRId16 ")", (value < 0) ? '-' : ' ', static_cast<int16_t>((value < 0) ? -value : value));
+    printf( "%cINT16_C(%6" PRId16 ")", (value < 0) ? '-' : ' ', (int16_t)((value < 0) ? -value : value));
   }
 }
 
