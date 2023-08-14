@@ -144,18 +144,13 @@ static const struct {
       { UINT64_C(15753889872705654480), UINT64_C(13458690406980115951) } }
   };
 
-TEST(sub, vrsubhn)
-{
-    // vsubhn_type: sub, half narrow
-    // r = vsubhn_type(a, b), a和b是宽类型，r是(a-b)右移n/2位后的结果（高n/2位）
-    
+int main(){
     f1();
     f2();
     f3();
     f4();
     f5();
     f6();
-    // EXPECT_TRUE(almostEqual(expected, actual));
 }
 
 void f1(){
