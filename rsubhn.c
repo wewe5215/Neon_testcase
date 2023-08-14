@@ -151,6 +151,7 @@ int main(){
     f4();
     f5();
     f6();
+    return 0;
 }
 
 void f1(){
