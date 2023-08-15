@@ -333,9 +333,9 @@ void f6(){
 
     for (size_t i = 0 ; i < (sizeof(test_vec_u32) / sizeof(test_vec_u32[0])) ; i++) {
         uint64x2_t a = vld1q_u32(test_vec_u32[i].a);
-        uint32x8_t b = vld1q_u32(test_vec_u32[i].b);
-        uint32x8_t c = vld1q_u32(test_vec_u32[i].c);
-        uint64x2_t rst = vabal_high_u32(a, b);
+        uint32x4_t b = vld1q_u32(test_vec_u32[i].b);
+        uint32x4_t c = vld1q_u32(test_vec_u32[i].c);
+        uint64x2_t rst = vabal_high_u32(a, b, c);
 
         printf("{ ");
         for(int j = 0;j < 2;j ++){
