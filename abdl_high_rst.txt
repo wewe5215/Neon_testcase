@@ -1,0 +1,48 @@
+{  INT16_C(   140),  INT16_C(    59),  INT16_C(   126),  INT16_C(    34),  INT16_C(    61),  INT16_C(    19),  INT16_C(   133),  INT16_C(   199) }
+{  INT16_C(    38),  INT16_C(   161),  INT16_C(     8),  INT16_C(   106),  INT16_C(   150),  INT16_C(    54),  INT16_C(   113),  INT16_C(    29) }
+{  INT16_C(   127),  INT16_C(   227),  INT16_C(     7),  INT16_C(   114),  INT16_C(   187),  INT16_C(    93),  INT16_C(    16),  INT16_C(   173) }
+{  INT16_C(   170),  INT16_C(    16),  INT16_C(   144),  INT16_C(    55),  INT16_C(    95),  INT16_C(   123),  INT16_C(   159),  INT16_C(    84) }
+{  INT16_C(    60),  INT16_C(    48),  INT16_C(   156),  INT16_C(    81),  INT16_C(   189),  INT16_C(   101),  INT16_C(    13),  INT16_C(    74) }
+{  INT16_C(    38),  INT16_C(    16),  INT16_C(   144),  INT16_C(   112),  INT16_C(    32),  INT16_C(    61),  INT16_C(    85),  INT16_C(    47) }
+{  INT16_C(    32),  INT16_C(   135),  INT16_C(    77),  INT16_C(    40),  INT16_C(    90),  INT16_C(     9),  INT16_C(   102),  INT16_C(     5) }
+{  INT16_C(   147),  INT16_C(    85),  INT16_C(    60),  INT16_C(    25),  INT16_C(   182),  INT16_C(   151),  INT16_C(    41),  INT16_C(    57) }
+{  INT32_C(        2628),  INT32_C(       36278),  INT32_C(        4518),  INT32_C(       22439) }
+{  INT32_C(         179),  INT32_C(        9855),  INT32_C(         766),  INT32_C(       10076) }
+{  INT32_C(        6635),  INT32_C(       26702),  INT32_C(       15157),  INT32_C(       13294) }
+{  INT32_C(       16048),  INT32_C(        2398),  INT32_C(        5620),  INT32_C(       37209) }
+{  INT32_C(       11252),  INT32_C(       12460),  INT32_C(       53525),  INT32_C(       28813) }
+{  INT32_C(       14793),  INT32_C(       23311),  INT32_C(       24078),  INT32_C(       10236) }
+{  INT32_C(       44660),  INT32_C(       26672),  INT32_C(       33073),  INT32_C(       12182) }
+{  INT32_C(         939),  INT32_C(       26263),  INT32_C(       30179),  INT32_C(       41965) }
+{  INT64_C(           184260864),  INT64_C(           885652241) }
+{  INT64_C(          2927659202),  INT64_C(           268985409) }
+{  INT64_C(           549476180),  INT64_C(           949283670) }
+{  INT64_C(           190239788),  INT64_C(          1949811436) }
+{  INT64_C(           993158791),  INT64_C(          2234691863) }
+{  INT64_C(          1927627679),  INT64_C(          1597600804) }
+{  INT64_C(          3030429238),  INT64_C(           172901446) }
+{  INT64_C(          2110843682),  INT64_C(           799717922) }
+{ UINT16_C(   13), UINT16_C(   72), UINT16_C(  127), UINT16_C(  171), UINT16_C(    7), UINT16_C(  142), UINT16_C(   22), UINT16_C(   14) }
+{ UINT16_C(   48), UINT16_C(   99), UINT16_C(   35), UINT16_C(   86), UINT16_C(   28), UINT16_C(   83), UINT16_C(   90), UINT16_C(  167) }
+{ UINT16_C(   17), UINT16_C(   20), UINT16_C(    6), UINT16_C(  146), UINT16_C(   36), UINT16_C(   76), UINT16_C(  141), UINT16_C(  119) }
+{ UINT16_C(   20), UINT16_C(    9), UINT16_C(   72), UINT16_C(   53), UINT16_C(  123), UINT16_C(  146), UINT16_C(   77), UINT16_C(   37) }
+{ UINT16_C(    6), UINT16_C(   70), UINT16_C(  154), UINT16_C(   82), UINT16_C(  185), UINT16_C(   50), UINT16_C(   20), UINT16_C(   13) }
+{ UINT16_C(   56), UINT16_C(    9), UINT16_C(   33), UINT16_C(   64), UINT16_C(  192), UINT16_C(   51), UINT16_C(    6), UINT16_C(   10) }
+{ UINT16_C(   41), UINT16_C(   18), UINT16_C(   79), UINT16_C(   20), UINT16_C(   56), UINT16_C(  141), UINT16_C(   53), UINT16_C(   50) }
+{ UINT16_C(  121), UINT16_C(    4), UINT16_C(   72), UINT16_C(   92), UINT16_C(   71), UINT16_C(   38), UINT16_C(    4), UINT16_C(   56) }
+{ UINT32_C(     28343), UINT32_C(     10348), UINT32_C(     20654), UINT32_C(     25808) }
+{ UINT32_C(     26939), UINT32_C(     31084), UINT32_C(     43910), UINT32_C(     34634) }
+{ UINT32_C(     16486), UINT32_C(     50265), UINT32_C(       847), UINT32_C(      2830) }
+{ UINT32_C(     51017), UINT32_C(     11764), UINT32_C(       872), UINT32_C(     47440) }
+{ UINT32_C(     13138), UINT32_C(     12008), UINT32_C(     38203), UINT32_C(     35394) }
+{ UINT32_C(     17565), UINT32_C(     20088), UINT32_C(     13870), UINT32_C(     25386) }
+{ UINT32_C(     37710), UINT32_C(      1272), UINT32_C(     11106), UINT32_C(     15864) }
+{ UINT32_C(      2933), UINT32_C(      7375), UINT32_C(     12329), UINT32_C(     22477) }
+{ UINT64_C(          3222312119), UINT64_C(           260915471) }
+{ UINT64_C(            33566741), UINT64_C(           487149939) }
+{ UINT64_C(          1686765578), UINT64_C(          2016132516) }
+{ UINT64_C(          1288322722), UINT64_C(          3280973260) }
+{ UINT64_C(          1903580656), UINT64_C(          2194893872) }
+{ UINT64_C(           524419545), UINT64_C(           649430632) }
+{ UINT64_C(          1728543459), UINT64_C(          3394009823) }
+{ UINT64_C(           725245157), UINT64_C(          1431011182) }
