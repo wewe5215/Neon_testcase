@@ -8,39 +8,8 @@
 #include <string.h>
 #include <errno.h>
 #include <inttypes.h>
-// static void
-// simde_test_codegen_f16(size_t buf_len,  float16 value) {
-//   simde_float32 valuef = simde_float16_to_float32(value);
-//   if (simde_math_isnanf(valuef)) {
-//     simde_test_codegen_snprintf_(buf, buf_len, "           SIMDE_NANHF");
-//   } else if (simde_math_isinf(valuef)) {
-//     simde_test_codegen_snprintf_(buf, buf_len, "%5cSIMDE_INFINITYHF", valuef < 0 ? '-' : ' ');
-//   } else {
-//     simde_test_codegen_snprintf_(buf, buf_len, "SIMDE_FLOAT16_VALUE(%9.2f)", HEDLEY_STATIC_CAST(double, valuef));
-//   }
-// }
+#include <math.h>
 
-// static void
-// simde_test_codegen_f32(size_t buf_len, char buf[HEDLEY_ARRAY_PARAM(buf_len)], simde_float32 value) {
-//   if (simde_math_isnan(value)) {
-//     simde_test_codegen_snprintf_(buf, buf_len, "           SIMDE_MATH_NANF");
-//   } else if (simde_math_isinf(value)) {
-//     simde_test_codegen_snprintf_(buf, buf_len, "%5cSIMDE_MATH_INFINITYF", value < 0 ? '-' : ' ');
-//   } else {
-//     simde_test_codegen_snprintf_(buf, buf_len, "SIMDE_FLOAT32_C(%9.2f)", HEDLEY_STATIC_CAST(double, value));
-//   }
-// }
-
-// static void
-// simde_test_codegen_f64(size_t buf_len, char buf[HEDLEY_ARRAY_PARAM(buf_len)], simde_float64 value) {
-//   if (simde_math_isnan(value)) {
-//     simde_test_codegen_snprintf_(buf, buf_len, "            SIMDE_MATH_NAN");
-//   } else if (simde_math_isinf(value)) {
-//     simde_test_codegen_snprintf_(buf, buf_len, "%7cSIMDE_MATH_INFINITY", value < 0 ? '-' : ' ');
-//   } else {
-//     simde_test_codegen_snprintf_(buf, buf_len, "SIMDE_FLOAT64_C(%9.2f)", HEDLEY_STATIC_CAST(double, value));
-//   }
-// }
 #if defined(HEDLEY_STATIC_CAST)
 #  undef HEDLEY_STATIC_CAST
 #endif
@@ -49,6 +18,43 @@
 #else
 #  define HEDLEY_STATIC_CAST(T, expr) ((T) (expr))
 #endif
+
+#  define SIMDE_FLOAT32_C(value) ((float) value)
+#  define SIMDE_FLOAT64_C(value) ((double) value)
+
+static void
+test_codegen_f16(float16_t value) {
+  float32_t valuef = HEDLEY_STATIC_CAST(float32_t, value);
+  if (isnan(value)) {
+    printf_( "           SIMDE_NANHF");
+  } else if (isinf(valuef)) {
+    printf_("%5cSIMDE_INFINITYHF", valuef < 0 ? '-' : ' ');
+  } else {
+    printf_("SIMDE_FLOAT16_VALUE(%9.2f)", HEDLEY_STATIC_CAST(double, valuef));
+  }
+}
+
+static void
+test_codegen_f32(float32_t value) {
+  if (isnan(value)) {
+    printf_( "           SIMDE_MATH_NANF");
+  } else if (isinf(value)) {
+    printf_("%5cSIMDE_MATH_INFINITYF", value < 0 ? '-' : ' ');
+  } else {
+    printf( "SIMDE_FLOAT32_C(%9.2f)", HEDLEY_STATIC_CAST(double, value));
+  }
+}
+
+static void
+test_codegen_f64(float64_t value) {
+  if (isnan(value)) {
+    printf_("            SIMDE_MATH_NAN");
+  } else if (isinf(value)) {
+    printf_("%7cSIMDE_MATH_INFINITY", value < 0 ? '-' : ' ');
+  } else {
+    printf_("SIMDE_FLOAT64_C(%9.2f)", HEDLEY_STATIC_CAST(double, value));
+  }
+}
 
 static void
 test_codegen_i8(int8_t value) {
