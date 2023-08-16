@@ -97,11 +97,11 @@ void f1(){
     for (size_t i = 0 ; i < (sizeof(test_vec_s16) / sizeof(test_vec_s16[0])) ; i++) {
         int16x8_t a = vld1q_s16(test_vec_s16[i].a);
         uint8x8_t  r = vld1_u8(test_vec_s16[i].r);
-        print_uint8x16(vqrshrun_high_s16(r, a, 1));
-        print_uint8x16(vqrshrun_high_s16(r, a, 3));
-        print_uint8x16(vqrshrun_high_s16(r, a, 5));
-        print_uint8x16(vqrshrun_high_s16(r, a, 6));
-        print_uint8x16(vqrshrun_high_s16(r, a, 8));
+        print_uint8x16(vqrshrun_high_n_s16(r, a, 1));
+        print_uint8x16(vqrshrun_high_n_s16(r, a, 3));
+        print_uint8x16(vqrshrun_high_n_s16(r, a, 5));
+        print_uint8x16(vqrshrun_high_n_s16(r, a, 6));
+        print_uint8x16(vqrshrun_high_n_s16(r, a, 8));
     }
     
 }
@@ -111,11 +111,11 @@ void f2(){
     for (size_t i = 0 ; i < (sizeof(test_vec_s32) / sizeof(test_vec_s32[0])) ; i++) {
         int32x4_t a = vld1q_s32(test_vec_s32[i].a);
         uint16x4_t r = vld1_u16(test_vec_s32[i].r);
-        print_uint16x8(vqrshrun_high_s32(r, a, 3));
-        print_uint16x8(vqrshrun_high_s32(r, a, 6));
-        print_uint16x8(vqrshrun_high_s32(r, a, 10));
-        print_uint16x8(vqrshrun_high_s32(r, a, 13));
-        print_uint16x8(vqrshrun_high_s32(r, a, 16));
+        print_uint16x8(vqrshrun_high_n_s32(r, a, 3));
+        print_uint16x8(vqrshrun_high_n_s32(r, a, 6));
+        print_uint16x8(vqrshrun_high_n_s32(r, a, 10));
+        print_uint16x8(vqrshrun_high_n_s32(r, a, 13));
+        print_uint16x8(vqrshrun_high_n_s32(r, a, 16));
 
         
     }
@@ -127,11 +127,11 @@ void f3(){
     for (size_t i = 0 ; i < (sizeof(test_vec_s64) / sizeof(test_vec_s64[0])) ; i++) {
         int64x2_t a = vld1q_s64(test_vec_s64[i].a);
         uint32x2_t  r = vld1_u32(test_vec_s64[i].r);
-        print_uint32x4(vqrshrun_high_s64(r, a, 6));
-        print_uint32x4(vqrshrun_high_s64(r, a, 13));
-        print_uint32x4(vqrshrun_high_s64(r, a, 19));
-        print_uint32x4(vqrshrun_high_s64(r, a, 26));
-        print_uint32x4(vqrshrun_high_s64(r, a, 32));
+        print_uint32x4(vqrshrun_high_n_s64(r, a, 6));
+        print_uint32x4(vqrshrun_high_n_s64(r, a, 13));
+        print_uint32x4(vqrshrun_high_n_s64(r, a, 19));
+        print_uint32x4(vqrshrun_high_n_s64(r, a, 26));
+        print_uint32x4(vqrshrun_high_n_s64(r, a, 32));
     }
     
 }
