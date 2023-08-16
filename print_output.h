@@ -135,3 +135,146 @@ test_codegen_u64(uint64_t value) {
     printf( "UINT64_C(%20" PRIu64 ")", value);
   }
 }
+
+
+void print_int8x8(int8x8_t r){
+  printf("{ ");
+        for(int j = 0;j < 8;j ++){
+            test_codegen_i8(r[j]);
+            if(j != 7)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_int16x4(int16x4_t r){
+  printf("{ ");
+        for(int j = 0;j < 4;j ++){
+            test_codegen_i16(r[j]);
+            if(j != 3)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_int32x2(int32x2_t r){
+  printf("{ ");
+        for(int j = 0;j < 2;j ++){
+            test_codegen_i32(r[j]);
+            if(j != 1)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_int64x1(int64x1_t r){
+  printf("{ ");
+        
+        test_codegen_i64(r);
+        
+  printf(" }\n");
+}
+
+void print_int8x16(int8x16_t r){
+  printf("{ ");
+        for(int j = 0;j < 16;j ++){
+            test_codegen_i8(r[j]);
+            if(j != 15)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_int16x8(int16x8_t r){
+  printf("{ ");
+        for(int j = 0;j < 8;j ++){
+            test_codegen_i16(r[j]);
+            if(j != 7)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_int32x4(int32x4_t r){
+  printf("{ ");
+        for(int j = 0;j < 4;j ++){
+            test_codegen_i32(r[j]);
+            if(j != 3)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_int64x2(int64x2_t r){
+  printf("{ ");
+        for(int j = 0;j < 2;j ++){
+            test_codegen_i64(r[j]);
+            if(j != 1)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint8x8(uint8x8_t r){
+  printf("{ ");
+        for(int j = 0;j < 8;j ++){
+            test_codegen_u8(r[j]);
+            if(j != 7)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint16x4(uint16x4_t r){
+  printf("{ ");
+        for(int j = 0;j < 4;j ++){
+            test_codegen_u16(r[j]);
+            if(j != 3)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint32x2(uint32x2_t r){
+  printf("{ ");
+        for(int j = 0;j < 2;j ++){
+            test_codegen_u32(r[j]);
+            if(j != 1)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint64x1(uint64x1_t r){
+  printf("{ ");
+        
+        test_codegen_u64(r);
+        
+  printf(" }\n");
+}
+
+void print_uint8x16(uint8x16_t r){
+  printf("{ ");
+        for(int j = 0;j < 16;j ++){
+            test_codegen_u8(r[j]);
+            if(j != 15)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint16x8(uint16x8_t r){
+  printf("{ ");
+        for(int j = 0;j < 8;j ++){
+            test_codegen_u16(r[j]);
+            if(j != 7)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint32x4(uint32x4_t r){
+  printf("{ ");
+        for(int j = 0;j < 4;j ++){
+            test_codegen_u32(r[j]);
+            if(j != 3)printf(", ");
+        }
+  printf(" }\n");
+}
+
+void print_uint64x2(uint64x2_t r){
+  printf("{ ");
+        for(int j = 0;j < 2;j ++){
+            test_codegen_u64(r[j]);
+            if(j != 1)printf(", ");
+        }
+  printf(" }\n");
+}
