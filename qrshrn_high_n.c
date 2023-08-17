@@ -186,11 +186,11 @@ void f1(){
     for (size_t i = 0 ; i < (sizeof(test_vec_s16) / sizeof(test_vec_s16[0])) ; i++) {
         int16x8_t a = vld1q_s16(test_vec_s16[i].a);
         int8x8_t  r = vld1_s8(test_vec_s16[i].r);
-        print_int8x16(vqrshrn_high_s16(r, a, 1));
-        print_int8x16(vqrshrn_high_s16(r, a, 3));
-        print_int8x16(vqrshrn_high_s16(r, a, 5));
-        print_int8x16(vqrshrn_high_s16(r, a, 6));
-        print_int8x16(vqrshrn_high_s16(r, a, 8));
+        print_int8x16(vqrshrn_high_n_s16(r, a, 1));
+        print_int8x16(vqrshrn_high_n_s16(r, a, 3));
+        print_int8x16(vqrshrn_high_n_s16(r, a, 5));
+        print_int8x16(vqrshrn_high_n_s16(r, a, 6));
+        print_int8x16(vqrshrn_high_n_s16(r, a, 8));
     }
     
 }
@@ -200,11 +200,11 @@ void f2(){
     for (size_t i = 0 ; i < (sizeof(test_vec_s32) / sizeof(test_vec_s32[0])) ; i++) {
         int32x4_t a = vld1q_s32(test_vec_s32[i].a);
         int16x4_t r = vld1_s16(test_vec_s32[i].r);
-        print_int16x8(vqrshrn_high_s32(r, a, 3));
-        print_int16x8(vqrshrn_high_s32(r, a, 6));
-        print_int16x8(vqrshrn_high_s32(r, a, 10));
-        print_int16x8(vqrshrn_high_s32(r, a, 13));
-        print_int16x8(vqrshrn_high_s32(r, a, 16));
+        print_int16x8(vqrshrn_high_n_s32(r, a, 3));
+        print_int16x8(vqrshrn_high_n_s32(r, a, 6));
+        print_int16x8(vqrshrn_high_n_s32(r, a, 10));
+        print_int16x8(vqrshrn_high_n_s32(r, a, 13));
+        print_int16x8(vqrshrn_high_n_s32(r, a, 16));
 
         
     }
@@ -216,11 +216,11 @@ void f3(){
     for (size_t i = 0 ; i < (sizeof(test_vec_s64) / sizeof(test_vec_s64[0])) ; i++) {
         int64x2_t a = vld1q_s64(test_vec_s64[i].a);
         int32x2_t  r = vld1_s32(test_vec_s64[i].r);
-        print_int32x4(vqrshrn_high_s64(r, a, 6));
-        print_int32x4(vqrshrn_high_s64(r, a, 13));
-        print_int32x4(vqrshrn_high_s64(r, a, 19));
-        print_int32x4(vqrshrn_high_s64(r, a, 26));
-        print_int32x4(vqrshrn_high_s64(r, a, 32));
+        print_int32x4(vqrshrn_high_n_s64(r, a, 6));
+        print_int32x4(vqrshrn_high_n_s64(r, a, 13));
+        print_int32x4(vqrshrn_high_n_s64(r, a, 19));
+        print_int32x4(vqrshrn_high_n_s64(r, a, 26));
+        print_int32x4(vqrshrn_high_n_s64(r, a, 32));
     }
     
 }
@@ -231,11 +231,11 @@ void f4(){
         uint16x8_t a = vld1q_u16(test_vec_u16[i].a);
         uint8x8_t  r = vld1_u8(test_vec_u16[i].r);
 
-        print_uint8x16(vqrshrn_high_u16(r, a, 1));
-        print_uint8x16(vqrshrn_high_u16(r, a, 3));
-        print_uint8x16(vqrshrn_high_u16(r, a, 5));
-        print_uint8x16(vqrshrn_high_u16(r, a, 6));
-        print_uint8x16(vqrshrn_high_u16(r, a, 8));
+        print_uint8x16(vqrshrn_high_n_u16(r, a, 1));
+        print_uint8x16(vqrshrn_high_n_u16(r, a, 3));
+        print_uint8x16(vqrshrn_high_n_u16(r, a, 5));
+        print_uint8x16(vqrshrn_high_n_u16(r, a, 6));
+        print_uint8x16(vqrshrn_high_n_u16(r, a, 8));
     }
     
 }
@@ -245,11 +245,11 @@ void f5(){
     for (size_t i = 0 ; i < (sizeof(test_vec_u32) / sizeof(test_vec_u32[0])) ; i++) {
         uint32x4_t a = vld1q_u32(test_vec_u32[i].a);
         uint16x4_t  r = vld1_u16(test_vec_u32[i].r);
-        print_uint16x8(vqrshrn_high_u32(r, a, 3));
-        print_uint16x8(vqrshrn_high_u32(r, a, 6));
-        print_uint16x8(vqrshrn_high_u32(r, a, 10));
-        print_uint16x8(vqrshrn_high_u32(r, a, 13));
-        print_uint16x8(vqrshrn_high_u32(r, a, 16));
+        print_uint16x8(vqrshrn_high_n_u32(r, a, 3));
+        print_uint16x8(vqrshrn_high_n_u32(r, a, 6));
+        print_uint16x8(vqrshrn_high_n_u32(r, a, 10));
+        print_uint16x8(vqrshrn_high_n_u32(r, a, 13));
+        print_uint16x8(vqrshrn_high_n_u32(r, a, 16));
     }
     
 }
@@ -259,11 +259,11 @@ void f6(){
     for (size_t i = 0 ; i < (sizeof(test_vec_u64) / sizeof(test_vec_u64[0])) ; i++) {
         uint64x2_t a = vld1q_u64(test_vec_u64[i].a);
         uint32x2_t  r = vld1_u32(test_vec_u64[i].r);
-        print_uint32x4(vqrshrn_high_u64(r, a, 6));
-        print_uint32x4(vqrshrn_high_u64(r, a, 13));
-        print_uint32x4(vqrshrn_high_u64(r, a, 19));
-        print_uint32x4(vqrshrn_high_u64(r, a, 26));
-        print_uint32x4(vqrshrn_high_u64(r, a, 32));
+        print_uint32x4(vqrshrn_high_n_u64(r, a, 6));
+        print_uint32x4(vqrshrn_high_n_u64(r, a, 13));
+        print_uint32x4(vqrshrn_high_n_u64(r, a, 19));
+        print_uint32x4(vqrshrn_high_n_u64(r, a, 26));
+        print_uint32x4(vqrshrn_high_n_u64(r, a, 32));
     }
     
 }
