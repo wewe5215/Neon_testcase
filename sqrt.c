@@ -101,28 +101,28 @@ static const struct {
     float16_t a;
     float16_t r;
   } test_vec_f16h[] = {
-    { SIMDE_FLOAT16_VALUE(   279.00),
+    { HEDLEY_STATIC_CAST(float16_t, 279.00),
     
     },
-    { SIMDE_FLOAT16_VALUE(   505.00),
+    { HEDLEY_STATIC_CAST(float16_t, 505.00),
     
     },
-    { SIMDE_FLOAT16_VALUE(    91.44),
+    { HEDLEY_STATIC_CAST(float16_t, 91.44),
     
     },
-    { SIMDE_FLOAT16_VALUE(   217.50),
+    { HEDLEY_STATIC_CAST(float16_t, 217.50),
     
     },
-    { SIMDE_FLOAT16_VALUE(   903.00),
+    { HEDLEY_STATIC_CAST(float16_t, 903.00),
     
     },
-    { SIMDE_FLOAT16_VALUE(  -717.50),
+    { HEDLEY_STATIC_CAST(float16_t, -717.50),
     
     },
-    { SIMDE_FLOAT16_VALUE(    45.19),
+    { HEDLEY_STATIC_CAST(float16_t, 45.19),
     
     },
-    { SIMDE_FLOAT16_VALUE(   148.88),
+    { HEDLEY_STATIC_CAST(float16_t, 148.88),
     
     }  
   };
@@ -132,28 +132,28 @@ static const struct {
       float16_t a[4];
       float16_t r[4];
     } test_vec_f16[] = {
-      { { SIMDE_FLOAT16_VALUE(  -228.12), SIMDE_FLOAT16_VALUE(   -98.75), SIMDE_FLOAT16_VALUE(   350.00), SIMDE_FLOAT16_VALUE(  -598.00) }
+      { { HEDLEY_STATIC_CAST(float16_t, -228.12), HEDLEY_STATIC_CAST(float16_t, -98.75), HEDLEY_STATIC_CAST(float16_t, 350.00), HEDLEY_STATIC_CAST(float16_t, -598.00) }
       
       },
-    { { SIMDE_FLOAT16_VALUE(  -136.50), SIMDE_FLOAT16_VALUE(  -721.00), SIMDE_FLOAT16_VALUE(  -692.00), SIMDE_FLOAT16_VALUE(  -858.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t, -136.50), HEDLEY_STATIC_CAST(float16_t, -721.00), HEDLEY_STATIC_CAST(float16_t, -692.00), HEDLEY_STATIC_CAST(float16_t, -858.00) } 
     
     },
-    { { SIMDE_FLOAT16_VALUE(  -990.00), SIMDE_FLOAT16_VALUE(   258.50), SIMDE_FLOAT16_VALUE(   727.00), SIMDE_FLOAT16_VALUE(   -48.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t,  -990.00), HEDLEY_STATIC_CAST(float16_t, 258.50), HEDLEY_STATIC_CAST(float16_t, 727.00), HEDLEY_STATIC_CAST(float16_t, -48.00) } 
     
     },
-    { { SIMDE_FLOAT16_VALUE(   617.00), SIMDE_FLOAT16_VALUE(  -746.00), SIMDE_FLOAT16_VALUE(   -75.25), SIMDE_FLOAT16_VALUE(   -41.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t, 617.00), HEDLEY_STATIC_CAST(float16_t, -746.00), HEDLEY_STATIC_CAST(float16_t, -75.25), HEDLEY_STATIC_CAST(float16_t, -41.00) } 
     
     },
-    { { SIMDE_FLOAT16_VALUE(  -718.00), SIMDE_FLOAT16_VALUE(  -271.25), SIMDE_FLOAT16_VALUE(  -665.00), SIMDE_FLOAT16_VALUE(   877.50) } 
+    { { HEDLEY_STATIC_CAST(float16_t, -718.00), HEDLEY_STATIC_CAST(float16_t, -271.25), HEDLEY_STATIC_CAST(float16_t, -665.00), HEDLEY_STATIC_CAST(float16_t, 877.50) } 
     
     },
-    { { SIMDE_FLOAT16_VALUE(  -662.00), SIMDE_FLOAT16_VALUE(  -253.50), SIMDE_FLOAT16_VALUE(   223.25), SIMDE_FLOAT16_VALUE( -1405.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t, -662.00), HEDLEY_STATIC_CAST(float16_t, -253.50), HEDLEY_STATIC_CAST(float16_t, 223.25), HEDLEY_STATIC_CAST(float16_t, -1405.00) } 
     
     },
-    { { SIMDE_FLOAT16_VALUE( -1530.00), SIMDE_FLOAT16_VALUE(  -257.50), SIMDE_FLOAT16_VALUE(  -206.00), SIMDE_FLOAT16_VALUE(   801.50) } 
+    { { HEDLEY_STATIC_CAST(float16_t, -1530.00), HEDLEY_STATIC_CAST(float16_t, -257.50), HEDLEY_STATIC_CAST(float16_t, -206.00), HEDLEY_STATIC_CAST(float16_t, 801.50) } 
     
     },
-    { { SIMDE_FLOAT16_VALUE(  -594.00), SIMDE_FLOAT16_VALUE( -1314.00), SIMDE_FLOAT16_VALUE(  -596.50), SIMDE_FLOAT16_VALUE(  1568.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t, -594.00), HEDLEY_STATIC_CAST(float16_t, -1314.00), HEDLEY_STATIC_CAST(float16_t, -596.50), HEDLEY_STATIC_CAST(float16_t, 1568.00) } 
     
     }
     
@@ -163,29 +163,29 @@ static const struct {
       float16_t a[8];
       float16_t r[8];
     } test_vec_f16q[] = {
-      { { SIMDE_FLOAT16_VALUE(  1125.00), SIMDE_FLOAT16_VALUE(  1424.00), SIMDE_FLOAT16_VALUE(   113.38), SIMDE_FLOAT16_VALUE(   109.50),
-        SIMDE_FLOAT16_VALUE(   -27.50), SIMDE_FLOAT16_VALUE(   142.50), SIMDE_FLOAT16_VALUE(  -435.75), SIMDE_FLOAT16_VALUE(   388.00) } 
+      { { HEDLEY_STATIC_CAST(float16_t, 1125.00), HEDLEY_STATIC_CAST(float16_t,   1424.00), HEDLEY_STATIC_CAST(float16_t,    113.38), HEDLEY_STATIC_CAST(float16_t,    109.50),
+        HEDLEY_STATIC_CAST(float16_t,   -27.50), HEDLEY_STATIC_CAST(float16_t,    142.50), HEDLEY_STATIC_CAST(float16_t,   -435.75), HEDLEY_STATIC_CAST(float16_t,    388.00) } 
       },
-    { { SIMDE_FLOAT16_VALUE(  -854.50), SIMDE_FLOAT16_VALUE(   844.50), SIMDE_FLOAT16_VALUE( -1528.00), SIMDE_FLOAT16_VALUE(   542.00),
-        SIMDE_FLOAT16_VALUE(   631.00), SIMDE_FLOAT16_VALUE(  -426.00), SIMDE_FLOAT16_VALUE(  1139.00), SIMDE_FLOAT16_VALUE(   359.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t,   -854.50), HEDLEY_STATIC_CAST(float16_t,    844.50), HEDLEY_STATIC_CAST(float16_t,  -1528.00), HEDLEY_STATIC_CAST(float16_t,    542.00),
+        HEDLEY_STATIC_CAST(float16_t,    631.00), HEDLEY_STATIC_CAST(float16_t,   -426.00), HEDLEY_STATIC_CAST(float16_t,   1139.00), HEDLEY_STATIC_CAST(float16_t,    359.00) } 
     },
-    { { SIMDE_FLOAT16_VALUE(   918.50), SIMDE_FLOAT16_VALUE(   -50.50), SIMDE_FLOAT16_VALUE(   -25.00), SIMDE_FLOAT16_VALUE(   892.00),
-        SIMDE_FLOAT16_VALUE(    91.88), SIMDE_FLOAT16_VALUE(  -461.00), SIMDE_FLOAT16_VALUE(  -720.00), SIMDE_FLOAT16_VALUE( -1230.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t,    918.50), HEDLEY_STATIC_CAST(float16_t,    -50.50), HEDLEY_STATIC_CAST(float16_t,    -25.00), HEDLEY_STATIC_CAST(float16_t,    892.00),
+        HEDLEY_STATIC_CAST(float16_t,     91.88), HEDLEY_STATIC_CAST(float16_t,   -461.00), HEDLEY_STATIC_CAST(float16_t,   -720.00), HEDLEY_STATIC_CAST(float16_t,  -1230.00) } 
     },
-    { { SIMDE_FLOAT16_VALUE(   195.50), SIMDE_FLOAT16_VALUE(   146.50), SIMDE_FLOAT16_VALUE(  1512.00), SIMDE_FLOAT16_VALUE(   826.00),
-        SIMDE_FLOAT16_VALUE(  -279.00), SIMDE_FLOAT16_VALUE(   652.00), SIMDE_FLOAT16_VALUE(  -814.50), SIMDE_FLOAT16_VALUE(  -217.88) } 
+    { { HEDLEY_STATIC_CAST(float16_t,    195.50), HEDLEY_STATIC_CAST(float16_t,    146.50), HEDLEY_STATIC_CAST(float16_t,   1512.00), HEDLEY_STATIC_CAST(float16_t,    826.00),
+        HEDLEY_STATIC_CAST(float16_t,   -279.00), HEDLEY_STATIC_CAST(float16_t,    652.00), HEDLEY_STATIC_CAST(float16_t,   -814.50), HEDLEY_STATIC_CAST(float16_t,   -217.88) } 
     },
-    { { SIMDE_FLOAT16_VALUE(   833.00), SIMDE_FLOAT16_VALUE(  1572.00), SIMDE_FLOAT16_VALUE(    87.00), SIMDE_FLOAT16_VALUE( -1076.00),
-        SIMDE_FLOAT16_VALUE(  -889.50), SIMDE_FLOAT16_VALUE(  1367.00), SIMDE_FLOAT16_VALUE(  -306.00), SIMDE_FLOAT16_VALUE(  -758.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t,    833.00), HEDLEY_STATIC_CAST(float16_t,   1572.00), HEDLEY_STATIC_CAST(float16_t,     87.00), HEDLEY_STATIC_CAST(float16_t,  -1076.00),
+        HEDLEY_STATIC_CAST(float16_t,   -889.50), HEDLEY_STATIC_CAST(float16_t,   1367.00), HEDLEY_STATIC_CAST(float16_t,   -306.00), HEDLEY_STATIC_CAST(float16_t,   -758.00) } 
     },
-    { { SIMDE_FLOAT16_VALUE(  -216.25), SIMDE_FLOAT16_VALUE( -1884.00), SIMDE_FLOAT16_VALUE(   317.00), SIMDE_FLOAT16_VALUE(  -495.25),
-        SIMDE_FLOAT16_VALUE(   767.50), SIMDE_FLOAT16_VALUE(  1502.00), SIMDE_FLOAT16_VALUE(  -713.00), SIMDE_FLOAT16_VALUE(  -240.75) } 
+    { { HEDLEY_STATIC_CAST(float16_t,   -216.25), HEDLEY_STATIC_CAST(float16_t,  -1884.00), HEDLEY_STATIC_CAST(float16_t,    317.00), HEDLEY_STATIC_CAST(float16_t,   -495.25),
+        HEDLEY_STATIC_CAST(float16_t,    767.50), HEDLEY_STATIC_CAST(float16_t,   1502.00), HEDLEY_STATIC_CAST(float16_t,   -713.00), HEDLEY_STATIC_CAST(float16_t,   -240.75) } 
     },
-    { { SIMDE_FLOAT16_VALUE(   659.50), SIMDE_FLOAT16_VALUE(  -156.50), SIMDE_FLOAT16_VALUE( -1025.00), SIMDE_FLOAT16_VALUE(  -229.50),
-        SIMDE_FLOAT16_VALUE(  1210.00), SIMDE_FLOAT16_VALUE(   669.00), SIMDE_FLOAT16_VALUE(  -988.00), SIMDE_FLOAT16_VALUE(  -984.00) } 
+    { { HEDLEY_STATIC_CAST(float16_t,    659.50), HEDLEY_STATIC_CAST(float16_t,   -156.50), HEDLEY_STATIC_CAST(float16_t,  -1025.00), HEDLEY_STATIC_CAST(float16_t,   -229.50),
+        HEDLEY_STATIC_CAST(float16_t,   1210.00), HEDLEY_STATIC_CAST(float16_t,    669.00), HEDLEY_STATIC_CAST(float16_t,   -988.00), HEDLEY_STATIC_CAST(float16_t,   -984.00) } 
     },
-    { { SIMDE_FLOAT16_VALUE(  -634.00), SIMDE_FLOAT16_VALUE(  -283.75), SIMDE_FLOAT16_VALUE(   -99.50), SIMDE_FLOAT16_VALUE(   134.00),
-        SIMDE_FLOAT16_VALUE(  -781.50), SIMDE_FLOAT16_VALUE(  1188.00), SIMDE_FLOAT16_VALUE(  -106.88), SIMDE_FLOAT16_VALUE(  -497.25) } 
+    { { HEDLEY_STATIC_CAST(float16_t,   -634.00), HEDLEY_STATIC_CAST(float16_t,   -283.75), HEDLEY_STATIC_CAST(float16_t,    -99.50), HEDLEY_STATIC_CAST(float16_t,    134.00),
+        HEDLEY_STATIC_CAST(float16_t,   -781.50), HEDLEY_STATIC_CAST(float16_t,   1188.00), HEDLEY_STATIC_CAST(float16_t,   -106.88), HEDLEY_STATIC_CAST(float16_t,   -497.25) } 
     }
     
     };
@@ -206,8 +206,8 @@ int main(){
 
 void f1(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f32) / sizeof(test_vec_f32[0])) ; i++) {
-        
-        float32x2_t rst = vsqrt_f32(test_vec_f32[i].a);
+        float32x2_t a = vld1q_s32(test_vec_f32[i].a);
+        float32x2_t rst = vsqrt_f32(a);
         printf("{ ");
         for(int j = 0;j < 2;j ++){
             test_codegen_f32(rst[j]);
@@ -219,8 +219,8 @@ void f1(){
 
 void f2(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f32q) / sizeof(test_vec_f32q[0])) ; i++) {
-        
-        float32x4_t rst = vsqrtq_f32(test_vec_f32q[i].a);
+        float32x4_t a = vld1q_f32(test_vec_f32q[i].a);
+        float32x4_t rst = vsqrtq_f32(a);
         printf("{ ");
         for(int j = 0;j < 4;j ++){
             test_codegen_f32(rst[j]);
@@ -232,8 +232,8 @@ void f2(){
 
 void f3(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f64) / sizeof(test_vec_f64[0])) ; i++) {
-        
-        float64x1_t rst = vsqrt_f64(test_vec_f64[i].a);
+        float64x1_t a = vld1_f64(test_vec_f64[i].a);
+        float64x1_t rst = vsqrt_f64(a);
         printf("{ ");
         
         test_codegen_f64(rst);
@@ -245,8 +245,8 @@ void f3(){
 
 void f4(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f64q) / sizeof(test_vec_f64q[0])) ; i++) {
-        
-        float64x2_t rst = vsqrtq_f64(test_vec_f64q[i].a);
+        float64x2_t a = vld1q_f64(test_vec_f64q[i].a);
+        float64x2_t rst = vsqrtq_f64(a);
         printf("{ ");
         for(int j = 0;j < 2;j ++){
             test_codegen_f64(rst[j]);
@@ -258,7 +258,7 @@ void f4(){
 
 void f5(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f16h) / sizeof(test_vec_f16h[0])) ; i++) {
-        
+        // float16_t a = vld1_f16(test_vec_f32[i].a);
         float16_t rst = vsqrth_f16(test_vec_f32[i].a);
         printf("{ ");
 
@@ -270,8 +270,8 @@ void f5(){
 
 void f6(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f16) / sizeof(test_vec_f16[0])) ; i++) {
-        
-        float16x4_t rst = vsqrt_f16(test_vec_f16[i].a);
+        float16x4_t a = vld1_f16(test_vec_f16[i].a);
+        float16x4_t rst = vsqrt_f16(a);
         printf("{ ");
         for(int j = 0;j < 4;j ++){
             test_codegen_f16(rst[j]);
@@ -283,8 +283,8 @@ void f6(){
 
 void f7(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f16q) / sizeof(test_vec_f16q[0])) ; i++) {
-        
-        float16x8_t rst = vsqrtq_f16(test_vec_f16q[i].a);
+        float16x8_t a = vld1q_f16(test_vec_f16q[i].a);
+        float16x8_t rst = vsqrtq_f16(a);
         printf("{ ");
         for(int j = 0;j < 8;j ++){
             test_codegen_f16(rst[j]);
