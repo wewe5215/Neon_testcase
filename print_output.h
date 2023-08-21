@@ -278,3 +278,68 @@ void print_uint64x2(uint64x2_t r){
         }
   printf(" }\n");
 }
+
+static int simde_test_codegen_rand(void) {
+  /* Single-threaded programs are so nice */
+  static int is_init = 0;
+  if (HEDLEY_UNLIKELY(!is_init)) {
+    #if !defined(HEDLEY_EMSCRIPTEN_VERSION)
+      FILE* fp = fopen("/dev/urandom", "r");
+      if (fp == NULL)
+        fp = fopen("/dev/random", "r");
+
+      if (fp != NULL) {
+        unsigned int seed;
+        size_t nread = fread(&seed, sizeof(seed), 1, fp);
+        fclose(fp);
+        if (nread == 1) {
+          srand(seed);
+          is_init = 1;
+        }
+      }
+    #endif
+
+    if (!is_init) {
+      srand(HEDLEY_STATIC_CAST(unsigned int, time(NULL)));
+      is_init = 1;
+    }
+  }
+
+  return rand();
+}
+
+static void
+simde_test_codegen_random_memory(size_t buf_len, uint8_t buf[HEDLEY_ARRAY_PARAM(buf_len)]) {
+  for (size_t i = 0 ; i < buf_len ; i++) {
+    buf[i] = HEDLEY_STATIC_CAST(uint8_t, simde_test_codegen_rand() & 0xff);
+  }
+}
+
+#define SIMDE_TEST_ARM_NEON_GENERATE_INT_TYPE_FUNCS_(NT, ET, element_count, modifier, symbol_identifier, neon_identifier) \
+  static simde_##NT \
+  simde_test_arm_neon_random_##symbol_identifier##x##element_count(void) { \
+    simde_##NT v; \
+    simde_test_codegen_random_memory(sizeof(v), HEDLEY_REINTERPRET_CAST(uint8_t*, &v)); \
+    return v; \
+  } \
+ \
+  static void \
+  simde_test_arm_neon_write_##symbol_identifier##x##element_count(int indent, simde_##NT value, SimdeTestVecPos pos) { \
+    ET value_[sizeof(value) / sizeof(ET)]; \
+ \
+    simde_vst1##modifier##_##neon_identifier(value_, value); \
+ \
+    simde_test_codegen_write_v##symbol_identifier(indent, sizeof(value) / sizeof(ET), value_, pos); \
+ \
+  } \
+ \
+  static int \
+  simde_test_arm_neon_assert_equal_##symbol_identifier##x##element_count##_(simde_##NT a, simde_##NT b, \
+      const char* filename, int line, const char* astr, const char* bstr) { \
+    ET a_[sizeof(a) / sizeof(ET)], b_[sizeof(b) / sizeof(ET)]; \
+ \
+    simde_vst1##modifier##_##neon_identifier(a_, a); \
+    simde_vst1##modifier##_##neon_identifier(b_, b); \
+ \
+    return simde_assert_equal_v##symbol_identifier##_(sizeof(a_) / sizeof(a_[0]), a_, b_, filename, line, astr, bstr); \
+  }
