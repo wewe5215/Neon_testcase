@@ -9,7 +9,7 @@
 #include <errno.h>
 #include <inttypes.h>
 #include <math.h>
-
+#include <arm_fp16.h>
 #if defined(HEDLEY_STATIC_CAST)
 #  undef HEDLEY_STATIC_CAST
 #endif
