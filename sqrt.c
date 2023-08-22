@@ -3,7 +3,7 @@ void f1();
 void f2();
 void f3();
 void f4();
-void f5();
+//void f5();
 void f6();
 void f7();
 
@@ -197,7 +197,7 @@ int main(){
     f2();
     f3();
     f4();
-    f5();
+  //  f5();
     f6();
     f7();
     return 0;
@@ -206,7 +206,7 @@ int main(){
 
 void f1(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f32) / sizeof(test_vec_f32[0])) ; i++) {
-        float32x2_t a = vld1_s32(test_vec_f32[i].a);
+        float32x2_t a = vld1_f32(test_vec_f32[i].a);
         float32x2_t rst = vsqrt_f32(a);
         printf("{ ");
         for(int j = 0;j < 2;j ++){
@@ -234,7 +234,10 @@ void f3(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f64) / sizeof(test_vec_f64[0])) ; i++) {
         float64x1_t a = vld1_f64(test_vec_f64[i].a);
         float64x1_t rst = vsqrt_f64(a);
-        print_int64x1(rst);
+        printf("{ ");
+        test_codegen_f64(rst[0]);
+        printf(" }\n");
+
     }
 }
 
@@ -251,17 +254,17 @@ void f4(){
     }
 }
 
-void f5(){
-    for (size_t i = 0 ; i < (sizeof(test_vec_f16h) / sizeof(test_vec_f16h[0])) ; i++) {
+//void f5(){
+//    for (size_t i = 0 ; i < (sizeof(test_vec_f16h) / sizeof(test_vec_f16h[0])) ; i++) {
         // float16_t a = vld1_f16(test_vec_f32[i].a);
-        float16_t rst = vsqrth_f16(test_vec_f16h[i].a);
-        printf("{ ");
+//        float16_t rst = vsqrth_f16(test_vec_f16h[i].a);
+//        printf("{ ");
 
-        test_codegen_f16(rst);
+//        test_codegen_f16(rst);
         
-        printf(" }\n");
-    }
-}
+//        printf(" }\n");
+//    }
+//}
 
 void f6(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f16) / sizeof(test_vec_f16[0])) ; i++) {
