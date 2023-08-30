@@ -3,10 +3,10 @@ void f1();
 void f2();
 void f3();
 void f4();
-//void f5();
+void f5();
 void f6();
 void f7();
-
+#define float64_t double
 static const struct {
     float32_t a[2];
     float32_t r[2];
@@ -197,7 +197,7 @@ int main(){
     f2();
     f3();
     f4();
-  //  f5();
+    f5();
     f6();
     f7();
     return 0;
@@ -208,12 +208,7 @@ void f1(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f32) / sizeof(test_vec_f32[0])) ; i++) {
         float32x2_t a = vld1_f32(test_vec_f32[i].a);
         float32x2_t rst = vsqrt_f32(a);
-        printf("{ ");
-        for(int j = 0;j < 2;j ++){
-            test_codegen_f32(rst[j]);
-            if(j != 1)printf(", ");
-        }
-        printf(" }\n");
+        print_float32x2(rst);
     }
 }
 
@@ -221,12 +216,7 @@ void f2(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f32q) / sizeof(test_vec_f32q[0])) ; i++) {
         float32x4_t a = vld1q_f32(test_vec_f32q[i].a);
         float32x4_t rst = vsqrtq_f32(a);
-        printf("{ ");
-        for(int j = 0;j < 4;j ++){
-            test_codegen_f32(rst[j]);
-            if(j != 3)printf(", ");
-        }
-        printf(" }\n");
+        print_float32x4(rst);
     }
 }
 
@@ -234,9 +224,7 @@ void f3(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f64) / sizeof(test_vec_f64[0])) ; i++) {
         float64x1_t a = vld1_f64(test_vec_f64[i].a);
         float64x1_t rst = vsqrt_f64(a);
-        printf("{ ");
-        test_codegen_f64(rst[0]);
-        printf(" }\n");
+        print_float64x1(rst);
 
     }
 }
@@ -245,37 +233,23 @@ void f4(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f64q) / sizeof(test_vec_f64q[0])) ; i++) {
         float64x2_t a = vld1q_f64(test_vec_f64q[i].a);
         float64x2_t rst = vsqrtq_f64(a);
-        printf("{ ");
-        for(int j = 0;j < 2;j ++){
-            test_codegen_f64(rst[j]);
-            if(j != 1)printf(", ");
-        }
-        printf(" }\n");
+        print_float64x2(rst);
     }
 }
 
-//void f5(){
-//    for (size_t i = 0 ; i < (sizeof(test_vec_f16h) / sizeof(test_vec_f16h[0])) ; i++) {
-        // float16_t a = vld1_f16(test_vec_f32[i].a);
-//        float16_t rst = vsqrth_f16(test_vec_f16h[i].a);
-//        printf("{ ");
-
-//        test_codegen_f16(rst);
-        
-//        printf(" }\n");
-//    }
-//}
+void f5(){
+   for (size_t i = 0 ; i < (sizeof(test_vec_f16h) / sizeof(test_vec_f16h[0])) ; i++) {
+        // float16_t a = vld1_f16(&test_vec_f16h[i].a);
+       float16_t rst = vsqrth_f16(test_vec_f16h[i].a);
+       print_float16(rst);
+   }
+}
 
 void f6(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f16) / sizeof(test_vec_f16[0])) ; i++) {
         float16x4_t a = vld1_f16(test_vec_f16[i].a);
         float16x4_t rst = vsqrt_f16(a);
-        printf("{ ");
-        for(int j = 0;j < 4;j ++){
-            test_codegen_f16(rst[j]);
-            if(j != 3)printf(", ");
-        }
-        printf(" }\n");
+        print_float16x4(rst);
     }
 }
 
@@ -283,11 +257,6 @@ void f7(){
     for (size_t i = 0 ; i < (sizeof(test_vec_f16q) / sizeof(test_vec_f16q[0])) ; i++) {
         float16x8_t a = vld1q_f16(test_vec_f16q[i].a);
         float16x8_t rst = vsqrtq_f16(a);
-        printf("{ ");
-        for(int j = 0;j < 8;j ++){
-            test_codegen_f16(rst[j]);
-            if(j != 7)printf(", ");
-        }
-        printf(" }\n");
+        print_float16x8(rst);
     }
 }
